@@ -1,0 +1,8 @@
+{
+  "name": "PrivacyLint",
+  "description": "An open-source privacy analysis and linting tool for Solana dApps that detects, explains, and helps fix on-chain privacy leaks.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
