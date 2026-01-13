@@ -19,17 +19,17 @@ const ScoreCard: React.FC<ScoreCardProps> = ({ score }) => {
   };
 
   return (
-    <div className={`p-8 rounded-2xl border-2 transition-all duration-500 ${getColor()} ${getBg()} flex flex-col items-center justify-center`}>
-      <span className="text-sm font-semibold uppercase tracking-widest opacity-70 mb-2">Privacy Score</span>
-      <div className="text-7xl font-bold mono">{score}</div>
-      <div className="mt-4 flex items-center gap-2">
-        <div className="w-24 h-2 bg-gray-800 rounded-full overflow-hidden">
+    <div className={`p-6 sm:p-8 rounded-2xl border-2 transition-all duration-500 ${getColor()} ${getBg()} flex flex-col items-center justify-center shadow-lg`}>
+      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] opacity-70 mb-2">Privacy Score</span>
+      <div className="text-6xl sm:text-7xl font-bold mono leading-none">{score}</div>
+      <div className="mt-4 flex items-center gap-2 w-full max-w-[140px]">
+        <div className="flex-1 h-2 bg-gray-800 rounded-full overflow-hidden">
           <div 
             className={`h-full transition-all duration-1000 ${score > 80 ? 'bg-green-400' : score > 50 ? 'bg-yellow-400' : 'bg-red-500'}`}
             style={{ width: `${score}%` }}
           />
         </div>
-        <span className="text-xs font-medium">/ 100</span>
+        <span className="text-[10px] sm:text-xs font-bold opacity-60">100</span>
       </div>
     </div>
   );
